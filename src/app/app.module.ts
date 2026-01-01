@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TabtaskComponent } from './shared/component/tabtask/tabtask.component';
+import { FruitsComponent } from './shared/component/fruits/fruits.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TabtaskComponent
+    TabtaskComponent,
+    FruitsComponent
   ],
   imports: [
     BrowserModule,

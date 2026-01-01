@@ -1,0 +1,101 @@
+
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a 
+        [ngClass]="{
+            'active':fruitsinfo.toLocaleLowerCase().includes('apple')
+        }"
+        (click)="onvisitfruit('apple')"
+        href="javascript:" class="nav-link ">apple</a>
+    </li>
+     <li class="nav-item">
+        <a 
+         [ngClass]="{
+            'active':fruitsinfo.toLocaleLowerCase().includes('banana')
+        }"
+         (click)="onvisitfruit('banana')"
+        href="javascript:" class="nav-link">banana</a>
+    </li>
+     <li class="nav-item">
+        <a 
+         [ngClass]="{
+            'active':fruitsinfo.toLocaleLowerCase().includes('mango')
+        }"
+         (click)="onvisitfruit('mango')"
+        href="javascript:" class="nav-link">mango</a>
+    </li>
+     <li class="nav-item">
+        <a
+         [ngClass]="{
+            'active':fruitsinfo.toLocaleLowerCase().includes('orange')
+        }"
+         (click)="onvisitfruit('orange')"
+        href="javascript:" class="nav-link">orange</a>
+    </li>
+
+     <li class="nav-item">
+        <a
+         [ngClass]="{
+            'active':fruitsinfo.toLocaleLowerCase().includes('papaya')
+        }"
+         (click)="onvisitfruit('papaya')"
+        href="javascript:" class="nav-link">papaya</a>
+    </li>
+     <li class="nav-item">
+        <a 
+         [ngClass]="{
+            'active':fruitsinfo.toLocaleLowerCase().includes('kiwi')
+        }"
+         (click)="onvisitfruit('kiwi')"
+        href="javascript:" class="nav-link">kiwi</a>
+    </li>
+</ul>
+
+
+<div [ngSwitch]="fruitsinfo">
+    <div class="card" *ngSwitchCase="'apple'">
+        <div class="card-body">
+            <strong>Apple</strong>is a healthy and popular fruit. It is usually red or green in color and tastes sweet. Apple is good for heart health and digestion.
+             It contains fiber and vitamins. Eating an apple daily keeps the body fit.
+        </div>
+    </div>
+<div class="card" *ngSwitchCase="'banana'">
+    <div class="card-body">
+        <strong>Banana </strong>
+        is a soft and sweet fruit. It is yellow in color and easy to eat. 
+        Banana gives instant energy and strength. It is rich in potassium and good for muscles. It is healthy for daily diet.
+
+🥭 Mango
+    </div>
+    </div>
+    <div class="card" *ngSwitchCase="'mango'">
+    <div class="card-body">
+        <strong>   Mango </strong>
+     is called the king of fruits. It is sweet, juicy, and mostly eaten in summer. Mango is rich in
+         Vitamin A and C. It helps improve immunity. Many people love mango for its taste.
+    </div>
+</div>
+<div class="card" *ngSwitchCase="'orange'">
+    <div class="card-body">
+        <strong>  Orange</strong>
+       is a citrus fruit with a tangy taste. It is orange in color and full of juice. Orange is rich in Vitamin C.
+         It boosts immunity and keeps skin healthy. It is good during cold and fever.
+    </div>
+</div>
+
+<div class="card" *ngSwitchCase="'papaya'">
+    <div class="card-body">
+        <strong> Papaya</strong>
+        is orange in color and very healthy. It is good for digestion and stomach problems.
+         Papaya contains fiber and vitamins. It helps in weight control. It also improves skin health.
+    </div>
+</div>
+<div class="card" *ngSwitchCase="'kiwi'">
+    <div class="card-body">
+        <strong>  Kiwi </strong>
+      is small and brown outside with green flesh inside. It has a sweet and sour taste. 
+        Kiwi is rich in Vitamin C. It boosts immunity and digestion. It is a very healthy fruit.
+    </div>
+</div>
+
+</div>
