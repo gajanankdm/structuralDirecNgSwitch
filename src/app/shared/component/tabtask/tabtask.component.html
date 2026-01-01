@@ -1,0 +1,58 @@
+<ul class="nav nav-pills">
+    <li class="nav-item">
+        <a [ngClass]="{
+            active:selectedskill.toLocaleLowerCase().includes('html')
+        }" href="javascript:;" class="nav-link active" (click)="selectedskillval('html')">HTML</a>
+    </li>
+    <li class="nav-item">
+        <a [ngClass]="{
+            'active':selectedskill.toLocaleLowerCase().includes('css')
+        }" href="javascript:;" (click)="selectedskillval('css')" class="nav-link">CSS</a>
+    </li>
+    <li class="nav-item">
+        <a [ngClass]="{
+            'active':selectedskill.toLocaleLowerCase().includes('javascript')
+        }" href="javascript:;" class="nav-link" (click)="selectedskillval('javascript')">JAVASCRIPT</a>
+    </li>
+    <li class="nav-item">
+        <a [ngClass]="{
+            'active':selectedskill.toLocaleLowerCase().includes('angular')
+        }" href="javascript:;" class="nav-link" (click)="selectedskillval('angular')">ANGULAR</a>
+    </li>
+</ul>
+
+<div [ngSwitch]="selectedskill">
+    <div class="card" *ngSwitchCase="'html'">
+        <div class="card-body">
+            <strong>HTML</strong>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus dolor molestiae sequi cupiditate minima,
+            ea nemo dolorum voluptas, ullam labore sed, doloremque quis
+            in! Ipsa aperiam aliquid magnam repellat minus.
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'css'">
+        <div class="card-body">
+            <strong>CSS</strong>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus dolor molestiae sequi cupiditate minima,
+            ea nemo dolorum voluptas, ullam labore sed, doloremque quis
+            in! Ipsa aperiam aliquid magnam repellat minus.
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'javascript'">
+        <div class="card-body">
+            <strong>JAVASCRIPT</strong>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus dolor molestiae sequi cupiditate minima,
+            ea nemo dolorum voluptas, ullam labore sed, doloremque quis
+            in! Ipsa aperiam aliquid magnam repellat minus.
+        </div>
+    </div>
+    <div class="card" *ngSwitchCase="'angular'">
+        <div class="card-body">
+            <strong>ANGULAR</strong>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus dolor molestiae sequi cupiditate minima,
+            ea nemo dolorum voluptas, ullam labore sed, doloremque quis
+            in! Ipsa aperiam aliquid magnam repellat minus.
+        </div>
+    </div>
+
+</div>
